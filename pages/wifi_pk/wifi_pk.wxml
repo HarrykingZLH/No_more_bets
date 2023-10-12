@@ -1,0 +1,9 @@
+<!--pages/wifi_pk/wifi_pk.wxml-->
+
+<view class="container">
+  <text class="room-option" bindtap="create_room">创建对战房间</text>
+  <text class="room-option" bindtap="join_room">加入对战房间</text>
+  <text class="room-option" bindtap="online_join">在线匹配对战</text>
+</view>
+
+

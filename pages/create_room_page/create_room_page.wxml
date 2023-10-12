@@ -1,0 +1,22 @@
+<!--pages/create_room_page/create_room_page.wxml-->
+
+
+
+<view class="settings-container">
+    <view class="title">创建房间</view>
+    <form bindsubmit="submitForm">
+
+        <view class="form-item">
+            <text>房间号：</text>
+            <input type = "text" placeholder="请输入房间号(4位数字)" bindinput="input_num" value="{{room_num}}"/>
+        </view>
+        <view class="form-item">
+            <text>房间密码：</text>
+            <input type = "text" placeholder="请输入房间密码(不超过8位数字)" bindinput="input_secret" value="{{room_secret}}"/>
+        </view>
+        <view class="button-container">
+            <button class="btn-home" bindtap="goToHomePage">返回</button>
+            <button class="btn-confirm" bindtap="create_things">创建对战房间</button>
+        </view>
+    </form>
+</view>

@@ -1,0 +1,27 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/vsgame/vsgame",
+    "pages/settings/settings",
+    "pages/rules/rules",
+    "pages/modes/modes",
+    "pages/ranks/ranks",
+    "pages/AI/AI",
+    "pages/AIsettings/AIsettings",
+    "pages/wifi_pk/wifi_pk",
+    "pages/create_room_page/create_room_page",
+    "pages/join_room_page/join_room_page",
+    "pages/online_vs/online_vs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "孤注一掷",
+    "navigationBarTextStyle":"black",
+    "navigationStyle": "custom",
+    "pageOrientation": "landscape"
+  },
+
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

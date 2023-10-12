@@ -1,0 +1,14 @@
+/* pages/wifi_pk/wifi_pk.wxss */  
+  .container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .room-option{
+    font-size: 26px;
+    color: #333;
+    margin: 10px 0;
+  }

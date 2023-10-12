@@ -1,0 +1,21 @@
+<view class="settings-container">
+    <view class="title">游戏设置</view>
+    <form bindsubmit="submitForm">
+        <view class="form-item">
+            <view>总局数：</view>
+            <input type="number" name="totalRounds" placeholder="请输入总局数" value="{{totalRounds}}" />
+        </view>
+        <view class="form-item">
+            <view>Player1的筹码：</view>
+            <input type="number" name="player1Chips" placeholder="请输入Player1的筹码" value="{{player1Chips}}" />
+        </view>
+        <view class="form-item">
+            <view>Player2的筹码：</view>
+            <input type="number" name="player2Chips" placeholder="请输入Player2的筹码" value="{{player2Chips}}" />
+        </view>
+        <view class="button-container">
+        <button class="btn-home" bindtap="goToHomePage">主页</button>
+        <button formType="submit" class="btn-confirm">确定</button>
+        </view>
+    </form>
+</view>

@@ -1,0 +1,54 @@
+<!--pages/rules/rules.wxml-->
+<view class="container">
+    <view class="title1">游戏规则</view>
+
+    <view class="title2">基础规则</view>
+    <view class="rules">
+        <view>进入游戏，选择游戏模式后，设置游戏局数和玩家个人筹码数；每一局游戏内有三轮投掷机会，玩家一人一次轮流投掷骰子，每个玩家有5个骰子；前两次投掷骰子之后可以选择锁定0~5个骰子，锁定的骰子位于选定区域不再改变；前两轮每轮投掷结束并在所有玩家锁定骰子后，每位玩家可以选择增加倍率 [0, 3],选择完成后进入下一轮；第三轮投掷结束后，所有玩家的全部骰子自动锁定并进行计分，得出最终结果（得分为五个骰子的点数总和+奖励分）</view>
+    </view>
+    
+    <view class="title2">奖励分示例</view>
+    <swiper indicator-dots="true" autoplay="true" circular="true">
+        <swiper-item>
+            <image src="/images/轮播图/双对.png" mode="heightFix"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/轮播图/三连.png" mode="heightFix"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/轮播图/葫芦.png" mode="heightFix"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/轮播图/四连.png" mode="heightFix"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/轮播图/五连.png" mode="heightFix"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/轮播图/小顺子.png" mode="heightFix"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/轮播图/大顺子.png" mode="heightFix"></image>
+        </swiper-item>
+    </swiper>
+
+    <view class="title2">结算规则</view>
+    <view class="rules">
+        <view>分数最高的玩家从所有其它玩家手里赢得（二人分差的绝对值*总倍率）的筹码；如若中途有玩家筹码小于等于0，则该玩家被击飞，游戏直接结束；N局游戏后，筹码最多的玩家获胜。</view>
+    </view>
+    
+    <image src="" mode=""/>
+</view>
+
+<view class="startbutton">
+    <image class="logo" src="/images/LOGO/WIFI.png" mode="" bind:tap="startGame"/>
+    <view class="button">开始游戏</view>
+</view>
+
+<view class="backbutton">
+    <image class="logo" src="/images/LOGO/home.png" mode="" bind:tap="goBack"/>
+    <view class="button">返回主页</view>
+</view>
+
+
+

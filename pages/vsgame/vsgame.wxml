@@ -1,0 +1,84 @@
+<view class="container1">
+    <view class="title">第{{count + '/' + number}}局：第{{rounds + '/3'}}回合</view>
+    <view class='title3'>总倍数：{{sum}}</view>
+</view>
+
+
+<view class="container">
+    <view class="player">
+        <!-- 玩家1回合内容 -->
+        <view class="message">
+            <view wx:if="{{player == 'player1'}}" class="title2">Player1</view>
+            <view wx:if="{{player == 'player2'}}" class="title1">Player1</view>
+            <view class="chips">剩余筹码：{{jettonPlayer1}}</view>
+        </view>
+        
+        <view class="dice-zone">
+            <!-- 显示投掷的骰子，根据实际情况动态生成 -->
+            <view style="font-weight:bold;margin-left:5vh;margin-top:1vh;">投掷区：</view>
+            <image class="touzi" src="" mode=""/>
+            <image class="touzi" wx:for="{{playerDice1}}" src="{{diceImages[item]}}" bindtap="lockDicePlayer1" wx:key="index" data-id="{{item}}" data-key="{{index}}"></image>
+        </view>
+
+        <view class="lock-zone">
+        <!-- 显示锁定的骰子，根据实际情况动态生成 -->
+            <view style="font-weight:bold;margin-left:5vh;margin-top:1vh;">锁定区：</view>
+            <image class="touzi" src="" mode=""/>
+            <image class="touzi" wx:for="{{playerLock1}}" src="{{diceImages[item]}}" bindtap="unlockDicePlayer1" wx:key="index" data-id="{{item}}" data-key="{{index}}"></image>
+        </view>
+
+        <button wx:if="{{!isMultiplierEnabled && player == 'player1' && !hasThrownDice1}}" bindtap="throwDicePlayer1">投掷</button>
+        <button wx:if="{{!isMultiplierEnabled && player == 'player1' && hasThrownDice1}}" bindtap="endTurn_player1">回合结束</button>
+
+        <radio-group wx:if="{{isMultiplierEnabled}}" class="multiplier" bindchange="handleMultiplierChange" data-id="1">
+            <label class="label">倍率</label>
+            <radio value="0" checked="true">0</radio>
+            <radio value="1">1</radio>
+            <radio value="2">2</radio>
+            <radio value="3">3</radio>
+        </radio-group>
+    </view>
+  
+    <view class="player">
+        <!-- 玩家2回合内容 -->
+        <view class="message">
+            <view wx:if="{{player == 'player2'}}" class="title2">Player2</view>
+            <view wx:if="{{player == 'player1'}}" class="title1">Player2</view>
+            <view class="chips">剩余筹码：{{jettonPlayer2}}</view>
+        </view>
+
+        <view class="dice-zone">
+            <!-- 显示投掷的骰子，根据实际情况动态生成 -->
+            <view style="font-weight:bold;margin-left:5vh;margin-top:1vh;">投掷区：</view>
+            <image class="touzi" src="" mode=""/>
+            <image class="touzi" wx:for="{{playerDice2}}" src="{{diceImages[item]}}" bindtap="lockDicePlayer2" wx:key="index" data-id="{{item}}" data-key="{{index}}"></image>
+        </view>
+
+        <view class="lock-zone">
+        <!-- 显示锁定的骰子，根据实际情况动态生成 -->
+            <view style="font-weight:bold;margin-left:5vh;margin-top:1vh;">锁定区：</view>
+            <image class="touzi" src="" mode=""/>
+            <image class="touzi" wx:for="{{playerLock2}}" src="{{diceImages[item]}}" bindtap="unlockDicePlayer2" wx:key="index" data-id="{{item}}" data-key="{{index}}"></image>
+        </view>
+
+        <button wx:if="{{!isMultiplierEnabled && player == 'player2' && !hasThrownDice2}}" bindtap="throwDicePlayer2">投掷</button>
+        <button wx:if="{{!isMultiplierEnabled && player == 'player2' && hasThrownDice2}}" bindtap="endTurn_player2">回合结束</button>
+        <radio-group wx:if="{{isMultiplierEnabled}}" bindchange="handleMultiplierChange" class="multiplier" data-id="2">
+            <label class="label">倍率</label>
+            <radio value="0" checked="true">0</radio>
+            <radio value="1">1</radio>
+            <radio value="2">2</radio>
+            <radio value="3">3</radio>
+        </radio-group>
+       
+    </view>
+</view>
+
+<view class="backbutton">
+    <image class="logo" src="/images/LOGO/home.png" mode="" bind:tap="goToHomePage"/>
+    <view class="button">退出游戏</view>
+</view>
+
+<button wx:if="{{isMultiplierEnabled}}"  class='sure' bind:tap="makeSure">确定倍率</button>
+
+<view class="bar"></view>

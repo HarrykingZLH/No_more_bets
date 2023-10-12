@@ -1,0 +1,40 @@
+<!-- settings.wxml -->
+<view class="settings-container">
+<text class="title">游戏设置</text>
+<form bindsubmit="submitForm">
+    
+    <view class="form-item">
+        <radio-group class="multiplier" bindchange="handleMultiplierChange" data-id="1">
+            <label class="label">游戏难度：</label>
+            <radio value="0" checked="true">简单</radio>
+            <radio value="1">普通</radio>
+            <radio value="2">困难</radio>
+        </radio-group>
+    </view>
+    
+    <view class="form-item">
+        <text>玩家昵称：</text>
+        <input type="text" name="player_name" placeholder="请输入玩家的昵称" value="{{player_name}}" />
+    </view>
+
+    
+    <view class="form-item">
+        <text>玩家的筹码：</text>
+        <input type="number" name="player1Chips" placeholder="请输入玩家的筹码" value="{{player1Chips}}" />
+    </view>
+    <view class="form-item">
+        <text>人机的筹码：</text>
+        <input type="number" name="player2Chips" placeholder="请输入人机的筹码" value="{{player2Chips}}" />
+    </view>
+    
+    <view class="form-item">
+        <text>总局数：</text>
+        <input type="number" name="totalRounds" placeholder="请输入总局数" value="{{totalRounds}}"/>
+    </view>
+
+    <view class="button-container">
+        <button class="btn-home" bindtap="goToHomePage">主页</button>
+        <button formType="submit" class="btn-confirm">确定</button>
+    </view>
+</form>
+</view>

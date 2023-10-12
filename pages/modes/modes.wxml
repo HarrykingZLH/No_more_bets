@@ -1,0 +1,22 @@
+<view class="container">
+    <text class="title">模式选择</text>
+    <view class="modes">
+        <view class="mode-option" bindtap="localMode">
+            <image class="mode-icon" src="/images/LOGO/VS.png"></image>
+            <text class="mode-label">本地对战</text>
+        </view>
+        <view class="mode-option" bindtap="aiMode">
+            <image class="mode-icon" src="/images/LOGO/AI.png"></image>
+            <text class="mode-label">人机对战</text>
+        </view>
+        <view class="mode-option" bindtap="onlineMode">
+            <image class="mode-icon" src="/images/LOGO/WIFI.png"></image>
+            <text class="mode-label">联机对战</text>
+        </view>
+    </view>
+</view>
+<view class="backbutton" bind:tap="goToHomePage">
+    <image class="logo" src="/images/LOGO/home.png" mode=""/>
+    <view class="button">返回主页</view>
+</view>
+

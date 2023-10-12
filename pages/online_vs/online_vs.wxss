@@ -1,0 +1,104 @@
+/* battle.wxss */
+.container {
+  display: flex;
+  justify-content: space-between; /* 在横屏模式下，将内容放置在左右两侧 */
+  height: 85vh;
+}
+
+.player,
+.opponent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%; /* 玩家和对手各占屏幕宽度的一半 */
+  /* 其他样式属性，根据实际需求设置 */
+}
+
+/* 根据实际需求设置投掷区（.dice-zone）和锁定区（.lock-zone）的样式 */
+.title {
+  height: 10vh;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #333;
+}
+
+.title1 {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: #000000;
+}
+
+.title2 {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: #880000;
+}
+
+.title3 {
+  height: 5vh;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: #000000;
+}
+
+.touzi {
+  height: 50px;
+  width: 50px;
+}  
+
+.dice-zone {
+  border-radius: 10px; /* 边框圆角，可以根据需要调整圆角半径 */
+  align-items: left;
+  height: 75px;
+  width: 80%;
+  border: 2px solid black;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.lock-zone {
+  border-radius: 10px; /* 边框圆角，可以根据需要调整圆角半径 */
+  align-items: left;
+  height: 75px;
+  width: 80%;
+  border: 2px solid #444444;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* 自定义选择器的样式 */
+picker {
+  background-color: #fff; /* 背景颜色 */
+  border: 2px solid #ccc; /* 边框样式 */
+  border-radius: 5px; /* 边框圆角 */
+  padding: 5px; /* 内边距 */
+}
+
+/* 自定义选择器的选项样式 */
+picker-view {
+  height: 50px; /* 选择器列表的高度 */
+}
+
+/* 自定义选择器的选项文字样式 */
+picker-view-column {
+  text-align: center; /* 文字居中对齐 */
+  font-size: 16px; /* 文字大小 */
+  color: #333; /* 文字颜色 */
+}
+
+/* 自定义选择器的选中项样式 */
+picker-view-column::after {
+  background-color: #007bff; /* 选中项背景颜色 */
+  height: 1px; /* 选中项下划线高度 */
+}

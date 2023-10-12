@@ -1,0 +1,26 @@
+<!--pages/home/home.wxml-->
+
+<view class="container1">
+    <view class="title1">欢迎来到骰子游戏</view>
+    <view class="title2">点击开始按钮开始游戏：</view>
+    <view class="container2">
+
+        <view class="container3">
+            <image class="subbutton" src="{{rulesImage}}" bind:touchstart="changeImage" bind:touchend="goToModes" data-id="规则"/>
+            <view>规则</view>
+        </view>
+
+        <view class="container3">
+            <image class="mainButton" src="{{startImage}}" bind:touchstart="changeImage" bind:touchend="goToModes" data-id="开始"/>
+        </view>
+
+        <view class="container3">
+            <image class="subbutton" src="{{ranksImage}}" bind:touchstart="changeImage" bind:touchend="goToModes" data-id="排名"/>
+            <view>排行榜</view>
+        </view>
+        
+    </view>
+</view>
+
+
+

@@ -1,0 +1,51 @@
+/* game.wxss */
+
+.container1 {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container2 {
+    height: 40vh;
+    display: flex;
+    align-items:flex-end;
+    justify-content: center;
+}
+
+.container3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title1 {
+    font-size: 45px;
+    margin-bottom: 1vh;
+}
+
+.title2 {
+    font-size: 16px;
+    margin-bottom: 10vh;
+}
+
+view {
+    font-weight: bold;
+    margin-bottom: 2vh;
+}
+ 
+.mainButton {
+    height: 32vh;
+    width: 32vh;
+    margin-left: 12vh;
+    margin-right: 12vh;
+    margin-bottom: 6vh;
+}
+
+.subbutton {
+    height: 15vh;
+    width: 15vh;
+}

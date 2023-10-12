@@ -1,0 +1,101 @@
+/* rules.wxss */
+view {
+    text-align: justify;
+    margin-bottom: 1vh;
+    font-size: 5vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+.title1 {
+    width: 160vh;
+    font-size: 8vh;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-top: 3vh;
+    padding: 2vh;
+    color: #e0e1dd;
+    background-color: #1b263b;
+}
+
+.title2 {
+    font-size: 6vh;
+    font-weight: bold;
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+}
+
+.rules {
+    text-indent: 10vh;
+    width: 160vh;
+}
+
+.up_button {
+    background-color: #DDDDDD;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.down_button {
+    background-color: #444444;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+swiper {
+    width: 140vh;
+    height: 35vh;
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+swiper image {
+    height: 100%;
+    display: inline-block; /* 使图片在轮播项中居中显示 */
+}
+
+.backbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    bottom: 5vh;
+    left: 10vh;
+}
+
+.startbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    bottom: 5vh;
+    right: 10vh;
+}
+
+.button {
+    font-size: 7px;
+}
+
+.logo {
+    height: 30px;
+    width: 30px;
+}

@@ -1,0 +1,72 @@
+<view class="title">第{{count + '/' + number}}局：第{{rounds + '/3'}}回合</view>
+<view class='title3'>总倍数：{{sum}}</view>
+
+<view class="container">
+
+    <view class="player">
+        <!-- 玩家回合内容 -->
+        <view wx:if="{{player == 'player1'}}" class="title2">您的回合</view>
+        <view wx:if="{{player == 'player2'}}" class="title1">您的回合</view>
+        <view class='title1'>剩余筹码：{{jettonPlayer1}}</view>
+
+        <view class="dice-zone">
+        <!-- 显示投掷的骰子，根据实际情况动态生成 -->
+        <view style="text-indent:1em;">投掷区：</view>
+        <image class="touzi" src="" mode=""/>
+        <image class="touzi" wx:for="{{playerDice1}}" src="{{diceImages[item]}}" bindtap="lockDicePlayer1" wx:key="index" data-id="{{item}}" data-key="{{index}}"></image>
+        </view>
+        <button bindtap="throwDicePlayer1" size="mini">投掷</button>
+
+        <view class="lock-zone">
+        <!-- 显示锁定的骰子，根据实际情况动态生成 -->
+        <view style="text-indent:1em;">锁定区:</view>
+        <image class="touzi" src="" mode=""/>
+        <image class="touzi" wx:for="{{playerLock1}}" src="{{diceImages[item]}}" bindtap="unlockDicePlayer1" wx:key="index" data-id="{{item}}" data-key="{{index}}"></image>
+        </view>
+
+        <picker mode="selector" range="{{multiplierOptions}}" bindchange="handleMultiplierChange" disabled="{{!isMultiplierEnabled}}" data-id="1">
+            <view class="picker">
+                <text>选择倍率：</text>
+                <text>{{player1Multiplier}}</text>
+            </view>
+        </picker>
+
+        <button bindtap="endTurn_player1_and_throwDicePlayer2" size="mini">回合结束</button>
+    </view>
+  
+    <view class="player">
+        <!-- 玩家回合内容 -->
+        <view wx:if="{{player == 'player2'}}" class="title2">对方回合</view>
+        <view wx:if="{{player == 'player1'}}" class="title1">对方回合</view>
+        <view class='title1'>剩余筹码：{{jettonPlayer2}}</view>
+
+        <view class="dice-zone">
+        <!-- 显示投掷的骰子，根据实际情况动态生成 -->
+        <view style="text-indent:1em;">投掷区：</view>
+        <image class="touzi" src="" mode=""/>
+        <image class="touzi" wx:for="{{playerDice2}}" src="{{diceImages[item]}}"  wx:key="index" data-id="{{item}}" data-key="{{index}}"></image>
+        </view>
+        <button size="mini">投掷</button>
+        <view class="lock-zone">
+        <!-- 显示锁定的骰子，根据实际情况动态生成 -->
+        <view style="text-indent:1em;">锁定区:</view>
+        <image class="touzi" src="" mode=""/>
+        <image class="touzi" wx:for="{{playerLock2}}" src="{{diceImages[item]}}" wx:key="index" data-id="{{item}}" data-key="{{index}}"></image>
+        </view>
+
+        <picker mode="selector" range="{{multiplierOptions}}" 
+         disabled="true" data-id="2">
+            <view class="picker">
+                <text>选择倍率：</text>
+                <text>{{player2Multiplier}}</text>
+            </view>
+        </picker>
+
+        <button size="mini">回合结束</button>
+    </view>
+
+    <!-- 游戏结束提示 -->
+    <view wx:if="{{gameOver}}">
+        <text>游戏结束</text>
+    </view>
+</view>

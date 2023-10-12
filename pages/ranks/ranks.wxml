@@ -1,0 +1,28 @@
+<view class="backbutton">
+    <image class="logo" src="/images/LOGO/home.png" mode="" bind:tap="goBack"/>
+    <view class="button">返回主页</view>
+</view>
+
+<view class="container">
+    <text class="title">排行榜</text>
+    <view class='list-group'>
+        <view class='list1'>
+            <view class='item' wx:for="{{ranks}}">
+                {{index+1}}.
+            </view>
+        </view>
+        <view class='list2'>
+            <view class='item' wx:for="{{ranks}}">
+                {{item['用户名']}}
+            </view>
+        </view>
+        <view class='list1'>
+            <view class='item' wx:for="{{ranks}}">
+                {{item['得分']}}分
+            </view>
+        </view>
+    </view>
+    
+    
+</view>
+
