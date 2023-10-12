@@ -1,5 +1,4 @@
 const app = getApp();
-
 Page({
   data: {
       init_player_socre:0,

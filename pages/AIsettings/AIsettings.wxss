@@ -1,5 +1,3 @@
-/* settings.wxss */
-
 /* 游戏设置容器 */
 .settings-container {
   display: flex;

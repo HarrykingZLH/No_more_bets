@@ -1,5 +1,4 @@
 /* game.wxss */
-
 .container1 {
     height: 100vh;
     display: flex;

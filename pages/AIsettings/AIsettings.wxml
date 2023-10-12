@@ -17,7 +17,6 @@
         <input type="text" name="player_name" placeholder="请输入玩家的昵称" value="{{player_name}}" />
     </view>
 
-    
     <view class="form-item">
         <text>玩家的筹码：</text>
         <input type="number" name="player1Chips" placeholder="请输入玩家的筹码" value="{{player1Chips}}" />

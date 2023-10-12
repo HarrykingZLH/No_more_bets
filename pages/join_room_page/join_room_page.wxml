@@ -1,8 +1,4 @@
 <!--pages/create_room_page/create_room_page.wxml-->
-
-
-
-<!--pages/create_room_page/create_room_page.wxml-->
 <view class="settings-container">
     <view class="title">加入房间</view>
     <form bindsubmit="submitForm">
