@@ -31,6 +31,9 @@
 # server
 这是nodejs服务器后端程序，用于实现客户端的在线对战和排行榜功能
 
+# 
+这是采用找alpha,beta,gama参数的代码
+
 ------
 # Runtime environment
 - miniprogram
