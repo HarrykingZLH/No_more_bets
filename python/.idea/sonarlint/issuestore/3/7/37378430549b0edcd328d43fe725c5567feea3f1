@@ -1,0 +1,5 @@
+
+jpython:S11920"LDefine a constant instead of duplicating this literal "æœªé”®å…¥-1" 4 times.(‘·µ8ÅâÎÏ°1
+tpython:S11924"PDefine a constant instead of duplicating this literal "è¾“å…¥é‡å¤å€¼" 4 times.(ÕáÊ§ûÿÿÿÿ8ÆâÎÏ°1
+xpython:S3776"TRefactor this function to reduce its Cognitive Complexity from 24 to the 15 allowed.(æ½î‚ıÿÿÿÿ8ÆâÎÏ°1
+spython:S3776H"TRefactor this function to reduce its Cognitive Complexity from 24 to the 15 allowed.(¸â®Í8ÆâÎÏ°1
